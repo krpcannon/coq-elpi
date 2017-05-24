@@ -260,6 +260,8 @@ constraint of val {
  %rule (G ?- of X T Y) <=> ($print (G ?- of X T Y)).
 }
 
+of hole TY X :- of _FRESH TY X.
+
 % typing match %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 type mk-rty list term -> term -> term -> term -> prop. 
 mk-rty ARGS HD (prod N S T) (lam N S F) :- !,
